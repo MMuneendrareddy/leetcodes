@@ -1,0 +1,11 @@
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        t_cnt = 0
+        for i in range(len(nums)) :
+            cnt =0
+            while nums[i] > 0 :
+                cnt += 1
+                nums[i] = nums[i] //10
+            if cnt % 2 == 0:
+                t_cnt +=1
+        return t_cnt
